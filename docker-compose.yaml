@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  gooddata-fdw:
+    build:
+      context: https://github.com/gooddata/gooddata-python-sdk.git
+      dockerfile: gooddata-fdw/Dockerfile
+    ports:
+      - "2543:5432"
+    environment:
+      POSTGRES_DB: gooddata
+      POSTGRES_USER: gooddata
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD-gooddata123}"
+    command: ["postgres", "-c", "shared_preload_libraries=foreign_table_exposer", "-c", "log_statement=all", "-c", "client_min_messages=DEBUG1", "-c", "log_min_messages=DEBUG1"]
