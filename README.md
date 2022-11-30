@@ -71,11 +71,24 @@ Need help with Python? Contact me.
 
 ## Analytics model in UI
 
+Let's play around. How many of the following questions can you answer using an insight or dashboard?
+
+* How many internal/external users use Python SDK?
+* Which API calls are the most used in the context of Python SDK?
+* How many people created their data source in trial?
+  * Which one was it? 
+  * How many tables were in the model?
+* Has anyone used workspace hierarchies in the trial?
+  * How deep the hierarchy was?
+  * Did they set up workspace data filters?
+
+
+
 ## [Optional] Can you make a pipeline?
 
 Imagine that you are a company that sells analytics using GoodData. Your clients want to have working dashboards and insights; therefore, you have several environments to support your client's desires.
 
-Let's have
+Let's have workspaces (aka environments):
 * development
 * stagging
 * production
