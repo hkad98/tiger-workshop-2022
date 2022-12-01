@@ -3,7 +3,7 @@ version: '3.7'
 services:
   gooddata-fdw:
     build:
-      context: https://github.com/gooddata/gooddata-python-sdk.git
+      context: https://github.com/hkad98/gooddata-python-sdk.git#FDW_fix
       dockerfile: gooddata-fdw/Dockerfile
     ports:
       - "2543:5432"
